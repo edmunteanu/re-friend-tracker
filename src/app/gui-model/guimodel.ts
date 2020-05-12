@@ -182,6 +182,13 @@ export class GuiModel {
                         },
                         {
                             "type": "button",
+                            "name": "Activity",
+                            "icon": "fa-calendar",
+                            "color": "red",
+                            "page": "activitiespage"
+                        },
+                        {
+                            "type": "button",
                             "name": "Groups",
                             "icon": "fa-weixin",
                             "color": "carrot",
@@ -303,6 +310,46 @@ export class GuiModel {
                             "color": "red",
                             "search": true,
                             "url": "/location/:locationKey/activity"
+                        }
+                    ]
+                },
+                {
+                    "id": "activitiespage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": "NewActivity",
+                            "icon": "fa-calendar",
+                            "color": "red",
+                            "form": {
+                                "form": "AddActivityForm"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "icon": "fa-calendar",
+                            "color": "red",
+                            "search": true,
+                            "url": "/activity",
+                            "page": "singleactivitypage"
+                        }
+                    ]
+                },
+                {
+                    "id": "singleactivitypage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "list",
+                            "icon": "fa-user",
+                            "color": "green",
+                            "search": true,
+                            "url": "/activity/:activityKey/friend"
                         }
                     ]
                 },
